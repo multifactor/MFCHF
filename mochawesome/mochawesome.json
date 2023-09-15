@@ -5,8 +5,8 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-09-15T01:17:35.560Z",
-    "end": "2023-09-15T01:17:35.564Z",
+    "start": "2023-09-15T01:30:10.639Z",
+    "end": "2023-09-15T01:30:10.643Z",
     "duration": 4,
     "testsRegistered": 1,
     "passPercent": 100,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e1b8701b-3985-42e3-ad92-5a385f8a0b63",
+      "uuid": "e6a59f66-63ad-4451-86f7-b21fdcaaf074",
       "title": "",
       "fullFile": "C:\\xampp\\htdocs\\Multifactor\\mfchf\\test\\index.js",
       "file": "\\test\\index.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8bba71f3-06de-4e2e-b5b7-5987dab97601",
+          "uuid": "1b063df3-d32b-4e6f-8eca-272b3cdce5d2",
           "title": "default",
           "fullFile": "C:\\xampp\\htdocs\\Multifactor\\mfchf\\test\\index.js",
           "file": "\\test\\index.js",
@@ -38,29 +38,29 @@
               "title": "default",
               "fullTitle": "default default",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
-              "speed": "slow",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "mfchf",
               "err": {},
-              "uuid": "0c65a30e-3b86-4c53-a3e8-796a0cfe6f2d",
-              "parentUUID": "8bba71f3-06de-4e2e-b5b7-5987dab97601",
+              "uuid": "dbda7a4c-72b5-4a9d-b88f-dc2f19e85ca3",
+              "parentUUID": "1b063df3-d32b-4e6f-8eca-272b3cdce5d2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0c65a30e-3b86-4c53-a3e8-796a0cfe6f2d"
+            "dbda7a4c-72b5-4a9d-b88f-dc2f19e85ca3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 5000
