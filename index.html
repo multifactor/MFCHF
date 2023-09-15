@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/zephyr/bootstrap.min.css" integrity="sha512-gmJFuKTEQw6aHC2cWdrmdEHYw/M/8+bfsKmsJCcQ5hoI7WoOtkQ9hs7P0fqpBGRHHqBBJMibeCfhmk8So5qYUw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<title>Multi-Factor Credential Hashing Function (MFCHF)</title>
+		<meta name="description" content="Since the introduction of bcrypt in 1999, adaptive password hashing functions, whereby brute-force resistance increases symmetrically with computational difficulty for legitimate users, have been our most powerful post-breach countermeasure against credential disclosure. Unfortunately, the relatively low tolerance of users to added latency places an upper bound on the deployment of this technique in most applications. In this paper, we present a multi-factor credential hashing function (MFCHF) that incorporates the additional entropy of multi-factor authentication into password hashes to provide asymmetric resistance to brute-force attacks. MFCHF provides full backward compatibility with existing authentication software (e.g., Google Authenticator) and hardware (e.g., YubiKeys), with support for common usability features like factor recovery. The result is a 10 6 to 10 48 times increase in the difficulty of cracking hashed credentials, with little added latency or usability impact.">
+		<link rel="icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/atom-one-dark.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="site.css" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fc4400">
+    <meta name="msapplication-TileColor" content="#fc4400">
+    <meta name="theme-color" content="#fc4400">
+		<meta property="og:title" content="Multi-Factor Credential Hashing Function (MFCHF)">
+		<meta property="og:description" content="Since the introduction of bcrypt in 1999, adaptive password hashing functions, whereby brute-force resistance increases symmetrically with computational difficulty for legitimate users, have been our most powerful post-breach countermeasure against credential disclosure. Unfortunately, the relatively low tolerance of users to added latency places an upper bound on the deployment of this technique in most applications. In this paper, we present a multi-factor credential hashing function (MFCHF) that incorporates the additional entropy of multi-factor authentication into password hashes to provide asymmetric resistance to brute-force attacks. MFCHF provides full backward compatibility with existing authentication software (e.g., Google Authenticator) and hardware (e.g., YubiKeys), with support for common usability features like factor recovery. The result is a 10 6 to 10 48 times increase in the difficulty of cracking hashed credentials, with little added latency or usability impact.">
+		<meta property="og:image" content="https://mfchf.com/banner.png">
+		<meta property="og:url" content="https://mfchf.com">
+		<meta name="twitter:title" content="Multi-Factor Credential Hashing Function (MFCHF)">
+		<meta name="twitter:description" content="Since the introduction of bcrypt in 1999, adaptive password hashing functions, whereby brute-force resistance increases symmetrically with computational difficulty for legitimate users, have been our most powerful post-breach countermeasure against credential disclosure. Unfortunately, the relatively low tolerance of users to added latency places an upper bound on the deployment of this technique in most applications. In this paper, we present a multi-factor credential hashing function (MFCHF) that incorporates the additional entropy of multi-factor authentication into password hashes to provide asymmetric resistance to brute-force attacks. MFCHF provides full backward compatibility with existing authentication software (e.g., Google Authenticator) and hardware (e.g., YubiKeys), with support for common usability features like factor recovery. The result is a 10 6 to 10 48 times increase in the difficulty of cracking hashed credentials, with little added latency or usability impact.">
+		<meta name="twitter:url" content="https://mfchf.com">
+		<meta name="twitter:card" content="summary">
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DZDQBLP1K5"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-DZDQBLP1K5');
+		</script>
+	</head>
+	<body>
+		<div class="jumbotron p-5">
+			<div class="bg-2"></div>
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-md-7">
+						<h1 class="text-light mb-3">Go beyond passwords</h1>
+						<p class="text-light lead mb-4">Password hashes are only as strong as the passwords they're based on. Securely leverage all of your users&apos; authentication factors with MFCHF.</p>
+						<div class="d-flex flex-column flex-md-row">
+							<a class="btn btn-secondary btn-lg me-md-3 mb-4" href="https://ieeexplore.ieee.org/document/10190544" target="_blank"><i class="fa-solid fa-file-lines"></i>&nbsp; Read the paper</a>
+							<a class="btn btn-outline-light btn-lg text-light me-md-3 mb-4" href="https://github.com/multifactor/MFCHF"><i class="fa-solid fa-code"></i>&nbsp; Get started</a>
+							<a class="btn btn-outline-light btn-lg text-light mb-4" href="https://github.com/multifactor/MFCHF/releases"><i class="fa-solid fa-download"></i>&nbsp; Download</a>
+						</div>
+						<div>
+							<a href="https://github.com/multifactor/MFCHF/releases"><img src="https://img.shields.io/github/release/multifactor/MFCHF.svg" alt="GitHub release" /></a>
+							<a href="https://www.mfchf.com/coverage"><img src="https://img.shields.io/badge/coverage-100%25-brightgreen" alt="Coverage: 100%" /></a>
+							<a href="https://www.mfchf.com/tests"><img src="https://img.shields.io/badge/tests-100%25-brightgreen" alt="Tests: 100%" /></a>
+						</div>
+					</div>
+					<div class="col-md-5 hero-image"></div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-grey">
+			<div class="container features py-4 mb-0 text-center text-lg-start">
+				<div class="row align-items-center">
+					<div class="col-3">
+						<div class="circle float-lg-start m-auto mb-3 mb-lg-0">
+							<i class="fa-solid fa-lock"></i>
+						</div>
+						<div class="float-lg-start ps-lg-3 m-auto">
+							<p class="m-0"><b>Secure</b></p>
+							<p class="text-muted mb-0">based on argon2id</p>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="circle float-lg-start m-auto mb-3 mb-lg-0">
+							<i class="fa-solid fa-fire-flame-curved"></i>
+						</div>
+						<div class="float-lg-start ps-lg-3 m-auto">
+							<p class="m-0"><b>Fast</b></p>
+							<p class="text-muted mb-0">≤ 20ms overhead</p>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="circle float-lg-start m-auto mb-3 mb-lg-0">
+							<i class="fa-solid fa-eye"></i>
+						</div>
+						<div class="float-lg-start ps-lg-3 m-auto">
+							<p class="m-0"><b>Transparent</b></p>
+							<p class="text-muted mb-0"><span class="d-none d-sm-inline">fully </span>open-source</p>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="circle float-lg-start m-auto mb-3 mb-lg-0">
+							<i class="fa-solid fa-maximize"></i>
+						</div>
+						<div class="float-lg-start ps-lg-3 m-auto">
+							<p class="m-0"><b>Flexible</b></p>
+							<p class="text-muted mb-0">modular design</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer mt-0">
+      <div class="container">
+        <span class="text-muted">Copyright ©2023 Multifactor • <a href="https://github.com/multifactor/MFCHF/blob/master/LICENSE">BSD-3-Clause-Clear</a></span>
+      </div>
+    </footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<script src="header.js"></script>
+	</body>
+</html>
