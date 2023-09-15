@@ -1,0 +1,8 @@
+{
+   "ui": "tdd",
+   "slow": "0",
+   "timeout": "5000",
+   "recursive": true,
+   "reporter": "mochawesome",
+   "reporterOptions": "reportDir=./site/mochawesome"
+}
