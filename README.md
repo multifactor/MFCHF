@@ -1,19 +1,19 @@
-[![MFCHF](https://raw.githubusercontent.com/multifactor/MFCHF/master/site/logo.png "MFCHF")](https://mfchf.com/ "MFCHF")
+[![MFCHF](https://raw.githubusercontent.com/multifactor/MFCHF/main/site/logo.png "MFCHF")](https://mfchf.com/ "MFCHF")
 
 Multi-Factor Credential Hashing Function
 
 [![GitHub issues](https://img.shields.io/github/issues/multifactor/MFCHF)](https://github.com/multifactor/MFCHF/issues)
 [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://www.mfchf.com/coverage)
 [![Tests](https://img.shields.io/badge/tests-100%25-brightgreen)](https://www.mfchf.com/tests/mochawesome.html)
-[![CC BY-NC-SA 4.0](https://img.shields.io/badge/license-BSD--3--Clause--Clear%204.0-brightgreen.svg)](https://github.com/multifactor/MFCHF/blob/master/LICENSE)
+[![CC BY-NC-SA 4.0](https://img.shields.io/badge/license-BSD--3--Clause--Clear%204.0-brightgreen.svg)](https://github.com/multifactor/MFCHF/blob/main/LICENSE)
 [![GitHub tag](https://img.shields.io/github/tag/multifactor/MFCHF.svg)](https://github.com/multifactor/MFCHF/tags)
 [![GitHub release](https://img.shields.io/github/release/multifactor/MFCHF.svg)](https://github.com/multifactor/MFCHF/releases)
 [![NPM release](https://img.shields.io/npm/v/mfchf.svg)](https://www.npmjs.com/package/mfchf)
 
 [Site](https://mfchf.com/) |
 [Docs](https://mfchf.com/docs/) |
-[Contributing](https://github.com/multifactor/MFCHF/blob/master/CONTRIBUTING.md) |
-[Security](https://github.com/multifactor/MFCHF/blob/master/SECURITY.md) |
+[Contributing](https://github.com/multifactor/MFCHF/blob/main/CONTRIBUTING.md) |
+[Security](https://github.com/multifactor/MFCHF/blob/main/SECURITY.md) |
 [Multifactor](https://github.com/multifactor) |
 [Paper](https://ieeexplore.ieee.org/document/10190544) |
 [Author](https://github.com/VCNinc)
@@ -46,4 +46,4 @@ Require MFCHF like so:
 
 	const mfchf = require('mfchf');
 
-Copyright ©2023 Multifactor • [BSD-3-Clause-Clear](https://github.com/multifactor/MFCHF/blob/master/LICENSE)
+Copyright ©2023 Multifactor • [BSD-3-Clause-Clear](https://github.com/multifactor/MFCHF/blob/main/LICENSE)
