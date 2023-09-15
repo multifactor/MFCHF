@@ -8,14 +8,14 @@
   },
   "docdash": {
     "openGraph": {
-      "title": "Documentation | Multi-Factor Key Derivation Function (MFKDF) | JavaScript",
+      "title": "Documentation | Multi-Factor Credential Hashing Function (MFCHF) | JavaScript",
       "type": "website",
-      "site-name": "MFKDF",
-      "url": "https://mfkdf.com/docs"
+      "site-name": "MFCHF",
+      "url": "https://mfchf.com/docs"
     },
     "meta": {
-      "title": "Documentation | Multi-Factor Key Derivation Function (MFKDF) | JavaScript",
-      "description": "Documentation for the JavaScript implementation of the Multi-Factor Key Derivation Function (MFKDF)."
+      "title": "Documentation | Multi-Factor Credential Hashing Function (MFCHF) | JavaScript",
+      "description": "Documentation for the JavaScript implementation of the Multi-Factor Credential Hashing Function (MFCHF)."
     },
     "search": true,
     "sort": false,
@@ -24,10 +24,10 @@
     "navLevel": 5,
     "menu": {
       "Project Website": {
-        "href": "https://mfkdf.com"
+        "href": "https://mfchf.com"
       },
       "GitHub Repository": {
-        "href": "https://github.com/multifactor/MFKDF"
+        "href": "https://github.com/multifactor/MFCHF"
       }
     },
     "scripts": ["https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js", "../docs.css", "../docs.js", "../header.js"],
