@@ -14,6 +14,11 @@ const { hotp } = require('speakeasy')
 const mod = (n, m) => ((n % m) + m) % m
 
 /**
+ * MFCHF-HOTP6
+ * @namespace hotp6
+ */
+
+/**
  * Setup an MFCHF hash with a password and 6-digit HOTP factor
  *
  * @example
@@ -30,6 +35,7 @@ const mod = (n, m) => ((n % m) + m) % m
  *
  * @author Vivek Nair (https://nair.me) <vivek@nair.me>
  * @since 0.1.0
+ * @memberof hotp6
  */
 async function setup (password) {
   if (typeof password !== 'string') throw new TypeError('password must be a string')
@@ -97,6 +103,7 @@ async function setup (password) {
  *
  * @author Vivek Nair (https://nair.me) <vivek@nair.me>
  * @since 0.1.0
+ * @memberof hotp6
  */
 async function verify (hash, password, code) {
   if (typeof hash !== 'string') throw new TypeError('hash must be a string')

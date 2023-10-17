@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Global - Documentation | Multi-Factor Credential Hashing Function (MFCHF) | JavaScript</title>
+    <title>hotp6 - Documentation | Multi-Factor Credential Hashing Function (MFCHF) | JavaScript</title>
     
     <meta name="description" content="Documentation for the JavaScript implementation of the Multi-Factor Credential Hashing Function (MFCHF)." />
     
@@ -46,7 +46,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Global</h1>
+    <h1 class="page-title">hotp6</h1>
     
 
     
@@ -60,7 +60,7 @@
     
         <h2>
         
-            
+            Namespace
         
         </h2>
         
@@ -73,9 +73,27 @@
         
             
 
-<dl class="details">
+
     
 
+    <h4 class="name" id="hotp6">hotp6</h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>MFCHF-HOTP6</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="hotp6.js.html">hotp6.js</a>, <a href="hotp6.js.html#line16">line 16</a>
+    </li></ul></dd>
     
 
     
@@ -112,9 +130,32 @@
 
 
 
-            
 
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         </div>
     
@@ -134,32 +175,38 @@
     
 
     
-
-    
-        <h3 class="subsection-title">Type Definitions</h3>
+        <h3 class="subsection-title">Methods</h3>
 
         
-                
-<h4 class="name" id="MFCHFSetup">MFCHFSetup</h4>
+            
 
+    
+
+    <h4 class="name" id=".setup"><span class="type-signature type-signature-async, static">(async, static) </span>setup<span class="signature">(password)</span><span class="type-signature"> &rarr; {<a href="global.html#MFCHFSetup">MFCHFSetup</a>}</span></h4>
+
+    
 
 
 
 
 <dl class="details">
     
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Setup an MFCHF hash with a password and 6-digit HOTP factor</li></ul></dd>
+    
 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line12">line 12</a>
+        <a href="hotp6.js.html">hotp6.js</a>, <a href="hotp6.js.html#line40">line 40</a>
     </li></ul></dd>
     
 
     
 
     
-
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>0.1.0</li></ul></dd>
     
 
     
@@ -172,6 +219,15 @@
 
     
 
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Vivek Nair (https://nair.me) &lt;vivek@nair.me></li>
+        </ul>
+    </dd>
     
 
     
@@ -189,11 +245,198 @@
 
 
 
-    <h5 class="subsection-title">Properties:</h5>
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>// Setup MFCHF-HOTP6 hashconst { hash, secret } = await mfchf.hotp6.setup('password123')// Verify MFCHF-HOTP6 hashconst otp = parseInt(hotp({ secret, counter: 1 }))const result = await mfchf.hotp6.verify(hash, 'password123', otp)result.valid.should.be.true</code></pre>
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The password to use</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    The resulting MFCHF hash and HOTP secret
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html#MFCHFSetup">MFCHFSetup</a></span>
+
+
+
+    </dd>
+</dl>
 
     
 
-<table class="props">
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".verify"><span class="type-signature type-signature-async, static">(async, static) </span>verify<span class="signature">(hash, password, code)</span><span class="type-signature"> &rarr; {<a href="global.html#MFCHFVerify">MFCHFVerify</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Verify an MFCHF hash with a password and 6-digit HOTP code</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="hotp6.js.html">hotp6.js</a>, <a href="hotp6.js.html#line108">line 108</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>0.1.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Vivek Nair (https://nair.me) &lt;vivek@nair.me></li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>// Setup MFCHF-HOTP6 hashconst { hash, secret } = await mfchf.hotp6.setup('password123')// Verify MFCHF-HOTP6 hashconst otp = parseInt(hotp({ secret, counter: 1 }))const result = await mfchf.hotp6.verify(hash, 'password123', otp)result.valid.should.be.true</code></pre>
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -232,170 +475,14 @@
 
             
 
-            <td class="description last">The MFCHF hash, formatted as a string</td>
+            <td class="description last">The MFCHF hash to verify</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>secret</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Buffer</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The underlying 2FA secret (HOTP, TOTP, etc.)</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-    <h5 class="h5-types">Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="MFCHFVerify">MFCHFVerify</h4>
-
-
-
-
-
-<dl class="details">
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line18">line 18</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>valid</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Whether the MFCHF hash matches the factors</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>hash</code></td>
+                <td class="name"><code>password</code></td>
             
 
             <td class="type">
@@ -409,18 +496,34 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
 
+            
+
+            <td class="description last">The password to use</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>code</code></td>
+            
+
+            <td class="type">
+            
                 
-                </td>
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
             
 
             
 
-            <td class="description last">The updated MFCHF hash, formatted as a string</td>
+            <td class="description last">The HOTP code to use</td>
         </tr>
 
     
@@ -434,23 +537,43 @@
 
 
 
-    <h5 class="h5-types">Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-
-        </li>
-    </ul>
 
 
 
 
 
 
-            
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    The verification result
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html#MFCHFVerify">MFCHFVerify</a></span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
     
 
     
