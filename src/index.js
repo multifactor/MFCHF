@@ -22,5 +22,6 @@
   */
 
 module.exports = {
-  ...require('./hotp6')
+  ...require('./hotp6'),
+  ...require('./totp6')
 }
