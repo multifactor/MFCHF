@@ -1,6 +1,6 @@
 {
   "name": "mfchf",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JavaScript Implementation of a Multi-Factor Credential Hashing Function (MFCHF)",
   "main": "src/index.js",
   "engines": {
