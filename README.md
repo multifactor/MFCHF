@@ -20,8 +20,7 @@ Multi-Factor Credential Hashing Function
 
 Since the introduction of bcrypt in 1999, adaptive password hashing functions, whereby brute-force resistance increases symmetrically with computational difficulty for legitimate users, have been our most powerful post-breach countermeasure against credential disclosure. Unfortunately, the relatively low tolerance of users to added latency places an upper bound on the deployment of this technique in most applications. In this paper, we present a multi-factor credential hashing function (MFCHF) that incorporates the additional entropy of multi-factor authentication into password hashes to provide asymmetric resistance to brute-force attacks. MFCHF provides full backward compatibility with existing authentication software (e.g., Google Authenticator) and hardware (e.g., YubiKeys), with support for common usability features like factor recovery. The result is a 10 6 to 10 48 times increase in the difficulty of cracking hashed credentials, with little added latency or usability impact.
 
-# Getting Started
-## Download MFCHF.js
+# Installation
 There are three ways to add `mfchf.js` to your project: self-hosted, using a CDN, or using NPM (recommended).
 
 ### Option 1: Self-Hosted
@@ -45,5 +44,29 @@ Add MFCHF to your NPM project:
 Require MFCHF like so:
 
 	const mfchf = require('mfchf');
+
+
+# Usage
+### MFCHF with Password + HOTP
+```
+// Setup MFCHF-HOTP6 hash
+const { hash, secret } = await mfchf.hotp6.setup('password123')
+
+// Verify MFCHF-HOTP6 hash
+const otp = parseInt(hotp({ secret, counter: 1 }))
+const result = await mfchf.hotp6.verify(hash, 'password123', otp)
+result.valid.should.be.true
+```
+
+### MFCHF with Password + TOTP
+```
+// Setup MFCHF-TOTP6 hash
+const { hash, secret } = await mfchf.totp6.setup('password123')
+
+// Verify MFCHF-TOTP6 hash
+const otp = parseInt(speakeasy.totp({ secret }))
+const result = await mfchf.totp6.verify(hash, 'password123', otp)
+result.valid.should.be.true
+```
 
 Copyright ©2023 Multifactor • [BSD-3-Clause-Clear](https://github.com/multifactor/MFCHF/blob/main/LICENSE)
